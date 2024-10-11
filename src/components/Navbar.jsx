@@ -18,8 +18,8 @@ const Navbar = () => {
             path: "/services"
         },
         {
-            title: "Contacts",
-            path: "/contacts"
+            title: "Dashboard",
+            path: "/dashboard"
         },
         {
             title: "Blogs",
@@ -29,6 +29,14 @@ const Navbar = () => {
 
     const handleLogin = () => {
         router.push("/login")
+    }
+
+    if (pathName.includes("dashboard")) {
+        return (
+            <div className='bg-green-400'>
+                Dashboard layout
+            </div>
+        )
     }
 
     return (
